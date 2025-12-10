@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savaş Yapım | Kreatif Dijital Medya Prodüksiyon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                        dark: '#0a0a0a',
+                        card: '#121212'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden">
+    <!-- Preloader -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-text">SAVAŞ YAPIM</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-6" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-3xl font-heading font-bold tracking-widest text-white">
+                SAVAŞ<span class="text-gold">YAPIM</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-widest uppercase">
+                <a href="#home" class="hover:text-gold transition-colors text-gray-300">Ana Sayfa</a>
+                <a href="#about" class="hover:text-gold transition-colors text-gray-300">Hakkımızda</a>
+                <a href="#services" class="hover:text-gold transition-colors text-gray-300">Hizmetler</a>
+                <a href="#projects" class="hover:text-gold transition-colors text-gray-300">Projeler</a>
+                <a href="#contact" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300">İletişim</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl text-white" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 md:hidden" id="mobile-menu">
+        <button class="absolute top-8 right-8 text-3xl text-gray-400 hover:text-white" id="close-menu-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="text-2xl font-heading uppercase tracking-widest hover:text-gold mobile-link">Ana Sayfa</a>
+        <a href="#about" class="text-2xl font-heading uppercase tracking-widest hover:text-gold mobile-link">Hakkımızda</a>
+        <a href="#services" class="text-2xl font-heading uppercase tracking-widest hover:text-gold mobile-link">Hizmetler</a>
+        <a href="#projects" class="text-2xl font-heading uppercase tracking-widest hover:text-gold mobile-link">Projeler</a>
+        <a href="#contact" class="text-2xl font-heading uppercase tracking-widest text-gold mobile-link">İletişim</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen w-full bg-hero-pattern bg-cover bg-center bg-fixed flex items-center justify-center text-center px-4">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-black opacity-80"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+            <p class="text-gold font-medium tracking-[0.3em] uppercase text-sm md:text-base animate-fade-in-down">Dijital Dünyanın Yönetmeni</p>
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-heading font-bold text-white leading-tight">
+                HAYALLERİNİZİ <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">SAHNEYE</span> TAŞIYORUZ
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg pt-4 leading-relaxed">
+                Bireysel veya kurumsal markanız için en iyi tasarım, prodüksiyon ve dijital stratejileri kurguluyoruz.
+            </p>
+            <div class="pt-8">
+                <a href="#projects" class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium tracking-tighter text-white bg-transparent border border-gray-600 rounded-none transition-all duration-300 hover:border-gold hover:text-gold">
+                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-gray-900 rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+                    <span class="relative uppercase tracking-widest text-sm flex items-center gap-3">
+                        Bizi Keşfedin <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-500 text-xl"></i>
+        </div>
+    </header>
+
+    <!-- Quote Section -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-gold opacity-20"></div>
+        <div class="container mx-auto px-6 text-center reveal">
+            <i class="fas fa-quote-left text-4xl text-gold mb-6 opacity-50"></i>
+            <h2 class="text-2xl md:text-4xl font-heading font-light leading-snug text-gray-200 max-w-4xl mx-auto">
+                "Eğer temelinde büyük fikir yoksa, reklamınız gece karanlığındaki bir gemi gibi geçip gider."
+            </h2>
+            <p class="mt-6 text-gold font-bold tracking-widest uppercase">— Leo Burnett</p>
+        </div>
+        <div class="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-gold opacity-20"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-zinc-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-2">Uzmanlık Alanlarımız</h4>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white">NELER YAPIYORUZ?</h2>
+                </div>
+                <div class="mt-6 md:mt-0 max-w-md text-gray-400 text-sm">
+                    Grafik tasarım, sosyal medya yönetimi ve prodüksiyon alanlarında tam kapsamlı çözümler sunuyoruz.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-video text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">TV Prodüksiyon</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Kısa ve uzun metrajlı filmler, reklam filmleri ve tanıtım videoları için son teknoloji ekipmanlarla profesyonel çözümler.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal delay-100">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-bezier-curve text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">Grafik Tasarım</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Marka kimliğinizi yansıtan logo, kurumsal kimlik ve dijital varlıklarınızı profesyonel bir vizyonla tasarlıyoruz.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal delay-200">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-hashtag text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">Sosyal Medya</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Influencer marketing ve stratejik içerik yönetimi ile markanızı dijital dünyada trendlere taşıyoruz.
+                    </p>
+                </div>
+
+                 <!-- Service 4 -->
+                 <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-tshirt text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">Moda & Defile</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Önde gelen giyim ve mücevher firmaları için defile organizasyonu ve koreografi yönetimi.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                 <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal delay-100">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-music text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">Müzik Yapım</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Potansiyel sanatçıları keşfediyor, prodüksiyon ve dağıtım süreçlerini yöneterek dinleyiciyle buluşturuyoruz.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group bg-card p-10 border border-white/5 hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 reveal delay-200">
+                    <div class="h-12 w-12 bg-zinc-800 rounded-full flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-black transition-colors">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-gold transition-colors">Casting & Model</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Reklam, dizi ve katalog çekimleri için geniş oyuncu ve model havuzumuzla doğru yüzü buluyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Portfolio Strip (Abstract representation of work) -->
+    <section id="projects" class="py-0 overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-4 h-96">
+            <div class="relative img-zoom-container group">
+                <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=800&q=80" alt="Film Set" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-transparent transition-all duration-500 flex items-center justify-center">
+                    <span class="text-white font-heading text-xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">PRODÜKSİYON</span>
+                </div>
+            </div>
+            <div class="relative img-zoom-container group">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Fashion" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-transparent transition-all duration-500 flex items-center justify-center">
+                    <span class="text-white font-heading text-xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">MODA</span>
+                </div>
+            </div>
+            <div class="relative img-zoom-container group">
+                <img src="https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&w=800&q=80" alt="Concert" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-transparent transition-all duration-500 flex items-center justify-center">
+                    <span class="text-white font-heading text-xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">FESTİVAL</span>
+                </div>
+            </div>
+            <div class="relative img-zoom-container group">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Meeting" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-transparent transition-all duration-500 flex items-center justify-center">
+                    <span class="text-white font-heading text-xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">STRATEJİ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Marquee Section -->
+    <section class="py-16 bg-black border-y border-zinc-900">
+        <div class="container mx-auto px-6 text-center mb-10">
+            <h3 class="text-gray-500 font-heading uppercase tracking-widest text-sm">Markalarımız & Partnerlerimiz</h3>
+        </div>
+        <div class="flex justify-center flex-wrap gap-8 md:gap-16 items-center opacity-60">
+            <!-- Brand Placeholders (Typography) -->
+            <h3 class="text-2xl font-heading text-white font-bold hover:text-gold transition-colors cursor-pointer">POWER1TV</h3>
+            <h3 class="text-2xl font-heading text-white font-bold hover:text-gold transition-colors cursor-pointer">INFLUENCER TREND</h3>
+            <h3 class="text-2xl font-heading text-white font-bold hover:text-gold transition-colors cursor-pointer">FASHION TIME</h3>
+            <h3 class="text-2xl font-heading text-white font-bold hover:text-gold transition-colors cursor-pointer">SAVAŞ CASTING</h3>
+        </div>
+    </section>
+
+    <!-- About Detail Section -->
+    <section id="about" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold"></div>
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Office Culture" class="w-full grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-gold"></div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">PROFESYONEL <br/><span class="text-gold">YAKLAŞIM</span></h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Grafik tasarım, web geliştirme ve prodüksiyon dünyasında standartları yeniden belirliyoruz. İşinizi büyütmek için sadece bir hizmet sağlayıcı değil, bir çözüm ortağı arıyorsanız doğru yerdesiniz.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Pazarlama iletişimi ve stratejisinin en önemli unsurlarını bir araya getiriyor, ürününüzün bilinirliğini marka farkındalığına dönüştürüyoruz.
+                    </p>
+                    <a href="#contact" class="inline-block border-b-2 border-gold pb-1 text-white hover:text-gold transition-colors font-bold uppercase tracking-widest text-sm">
+                        Bizimle Tanışın
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-zinc-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-black p-8 md:p-16 relative shadow-2xl reveal">
+                <!-- Decorative Element -->
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold text-black px-6 py-2 font-bold uppercase tracking-widest font-heading">
+                    İletişime Geç
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-heading text-white mb-2">ADRES</h3>
+                            <p class="text-gray-400">Etiler / İSTANBUL<br>Türkiye</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading text-white mb-2">TELEFON</h3>
+                            <p class="text-gray-400 hover:text-gold transition-colors">+555 211 3747</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading text-white mb-2">EMAIL</h3>
+                            <p class="text-gray-400 hover:text-gold transition-colors">info@savasyapim.com</p>
+                        </div>
+                        <div class="flex space-x-4 pt-4">
+                            <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center rounded-full text-gray-400 hover:border-gold hover:text-gold transition-all"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center rounded-full text-gray-400 hover:border-gold hover:text-gold transition-all"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center rounded-full text-gray-400 hover:border-gold hover:text-gold transition-all"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <input type="text" placeholder="Adınız Soyadınız" required class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-gold transition-colors placeholder-gray-600">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="E-Posta Adresiniz" required class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-gold transition-colors placeholder-gray-600">
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Mesajınız..." required class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-gold transition-colors placeholder-gray-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold text-black font-bold py-4 uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                            GÖNDER
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-zinc-900">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <div class="mb-4 md:mb-0">
+                &copy; 2024 Savaş Yapım. Tüm hakları saklıdır.
+            </div>
+            <div class="flex space-x-6 uppercase tracking-wider text-xs">
+                <a href="#" class="hover:text-gold transition-colors">Gizlilik</a>
+                <a href="#" class="hover:text-gold transition-colors">Kullanım Şartları</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

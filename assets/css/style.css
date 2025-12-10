@@ -1,0 +1,88 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4af37; 
+}
+
+/* Text Selection */
+::selection {
+    background: #d4af37;
+    color: #000;
+}
+
+/* Loader Animation */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+
+.loader-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    background: linear-gradient(90deg, #333 0%, #fff 50%, #333 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Reveal Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism Nav */
+.glass-nav {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Image Hover Zoom */
+.img-zoom-container {
+    overflow: hidden;
+}
+
+.img-zoom-container img {
+    transition: transform 0.7s ease;
+}
+
+.img-zoom-container:hover img {
+    transform: scale(1.1);
+}
+
